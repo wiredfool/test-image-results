@@ -1,0 +1,5 @@
+vpy/*
+env
+*.pyc
+*~
+dist/

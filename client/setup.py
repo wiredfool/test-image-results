@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='test-image-results',
-    version='0.0.1',
+    version='0.0.2',
     packages=['test_image_results'],
     url='http://github.com/wiredfool/test-image-results',
     license='MIT',

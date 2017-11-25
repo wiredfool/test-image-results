@@ -1,4 +1,5 @@
-# Test Image Difference uploader.
+Test Image Difference uploader.
+===============================
 
 Uploads to a lambda function.
 

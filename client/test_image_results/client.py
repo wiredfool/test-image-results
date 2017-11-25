@@ -2,9 +2,13 @@
 import requests
 import os
 import io
+import logging
 
 API = 'https://fmuvehxed0.execute-api.us-east-2.amazonaws.com/prod'
 API_KEY = os.environ.get('PILLOW_TEST_API_KEY', None)
+
+# suppress requests logging info
+logging.getLogger('requests').setLevel(logging.ERROR)
 
 def _send_one(presigned_struct, img):
     requests.post(presigned_struct['url'],

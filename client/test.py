@@ -1,6 +1,6 @@
 from __future__ import print_function
 
-import client
+from test_image_results import client
 import unittest
 import requests
 from PIL import Image

@@ -9,17 +9,17 @@ class TestClient(unittest.TestCase):
 
     SRC = Image.open('../lambda/images/hopper.png')
 
-    def test_geturls(self):
+    def test_geturls(self) -> None:
         urls = client._geturls()
         self.assert_(urls['display'])
         self.assert_(urls['upload']['result']['url'])
         self.assert_(urls['upload']['target']['url'])
 
-    def test_convert(self):
+    def test_convert(self) -> None:
         stream = client._convert(self.SRC)
         self.assertEqual(stream[:4], b'\x89PNG')
     
-    def test_upload(self):
+    def test_upload(self) -> None:
         url = client.upload(self.SRC.convert('P'), self.SRC)
         self.assert_(url)
         r = requests.get(url)
